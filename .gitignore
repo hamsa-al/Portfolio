@@ -1,16 +1,2 @@
-
-*.json
-
-*.js
-
-*.txt
-
-bower_components/jquery/dist/jquery.min.map
-
-bower_components/jquery/dist/jquery.slim.min.map
-
-bower_components/jquery/external/sizzle/dist/sizzle.min.map
-
-bower_components/jquery/README.md
-
+bower_components
 config.codekit3
