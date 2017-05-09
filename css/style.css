@@ -10,8 +10,8 @@ h1{
   font-size: 36px;
   line-height: 44px;
   text-align: center;
-
 }
+
 h2{
 font-family: 'Futura', sans-serif;
 letter-spacing: 2px;
@@ -44,14 +44,24 @@ li{
   line-height: 20px;
 
 }
+
 a,  a:visited{
-  color:#FFFFFF
+  color:#FFFFFF;
 }
 a:link {
     text-decoration: none;
 }
+.container3-p{
+  color:black;
+  font-family: Futura-Medium;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+.container3-h1{
+  color:black;
 
-
+}
 /*===================%px%px%%px================*/
 html,body{
   height:100%;
@@ -60,26 +70,30 @@ html,body{
 body{
   margin:0;
 }
-.babycontainer{
+.container1-body{
   margin-left:96px;
   margin-right: 96px;
   }
-.babycontainer2{
+.container2-body{
   margin-left:96px;
   margin-right: 96px;
 }
-.name, .face,.title{
-  width:33.333333%;
-
+.container3-body{
+  margin-left:96px;
+  margin-right: 96px;
 }
-.left{
+
+.container1-name, .container1-face,.container1-title{
+  width:33.333333%;
+}
+.container2-left{
   width:66.66666%;
   margin-right: 48px;
   margin-top:96px;
-  /*margin-bottom:96px;*/
+  margin-bottom:96px;
 
 }
-.right{
+.container2-right{
   width:33.333333%;
   margin-left:48px;
   margin-top:96px;
@@ -87,11 +101,18 @@ body{
   margin-left:48px;
   /*margin-bottom:96px;*/
 }
-.Bottom{
+.container2-Bottom{
   width:100%;
-  margin-bottom:96px;
+  /*margin-bottom:96px;*/
+}
+.container3-right-textbox{
+  margin-right:48px;
+  margin-left:48px;
 
 }
+.container3-title1, .container3-text, .container3-title2{
+height: 100%;
+width: auto;}
 
 ul {
 list-style-type: none;
@@ -113,67 +134,97 @@ h2{
 li{
   margin-right:24px;
 }
+img {
 
+    max-width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+
+}
 /*====================FlexBox container1====================*/
-
-.babycontainer{
+.container1-body{
   display:flex;
   flex-direction: row;
   height:100%;
 }
 
-.name{
+.container1-name{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.face{
+.container1-face{
   display:flex;
 }
-.title{
+.container1-title{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 /*====================FlexBox Container2===================*/
-.babycontainer2{
+.container2-body{
   display: flex;
   flex-direction: column;
-  height:100%;
   justify-content: space-between;
-
+  height:100%;
 }
-.top{
+.container2-top{
   display: flex;
   flex-direction: row;
 }
-.left{
+.container2-left{
   display: flex;
 }
-.intro{
+.container2-intro{
   display: flex;
   flex-direction: column;
   margin:0;
   padding:0;
 }
-.bottom{
+.container2-bottom{
   display:flex;
   justify-content: center;
   flex-direction: column;
 
 }
-.right{
+.container2-right{
   display: flex;
 }
-.inlineList {
+.container2-inlineList {
   display: flex;
   list-style:none;
   padding:0;
   margin:0;
 }
+/*====================FlexBox Container3===================*/
+.container3-body{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height:100%;
+}
+.container3-right{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+.container3-right-textbox{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container3-left{
+  width:50%;
+
+  }
 
 /*====================parallax====================*/
+
 .container1{
   background-image: url('../image/image.jpg');
   background-position: center;
@@ -183,11 +234,21 @@ li{
   height:100%;
 }
 
-.container2{
+.container2 {
   background-color: #212124;
   height:100%;
+
 }
+.container3{
+  background-color: #E9EAE5;
+  height:100%;
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.25);
+  border-radius: 3px;
+}
+
 /*=====================Hover======================*/
+
+
 .hvr-sweep-to-top {
   display: flex;
   align-items: center;
@@ -229,9 +290,9 @@ li{
   transform: scaleY(1);
 }
 
-/*===================Media Queries==================*/
+/*===================Media Queries 480px==================*/
 @media (max-width:480px) {
-.babycontainer, .babycontainer2{
+.container1-body, .container2-body{
   flex-direction: column;
   align-items: center;
   margin-left: 16px;
@@ -247,13 +308,13 @@ First Container
   background-attachment: fixed;
 }
 
-.name{
+.container1-name{
   order:1
 }
-.face{
+.container1-face{
   order:3
 }
-.title{
+.container1-title{
   width: auto;
   order:2
   }
@@ -263,47 +324,212 @@ First Container
   =============*/
 .container2{
     height: auto;
-    width: 100%;
+    width: auto;
     display: flex;
   }
 
-.top{
+.container2-top{
   display: flex;
   flex-direction: column;
 }
-.left, .right{
+.container2-left, .container2-right{
   display: flex;
   justify-content: flex-start;
-  width: 100%;
+  width: auto;
   margin-left: 0;
 }
-.left{
+.container2-left{
   margin-top: ;
   margin-bottom:48px;
 }
-.right{
+.container2-right{
   margin-top: 0;
   margin-bottom:48px;
 }
-.bottom{
+.container2-bottom{
   margin-top: 0;
-  width:100%;
+  width:auto;
 }
-.intro{
+.container2-intro{
   margin-bottom: 48px;
   margin:top:48px;
 }
-.Ican{
+.container2-skills-list{
   margin-top: 20px;
 }
 p{
   font-size:18px;
   line-height: 28px;
 }
-.inlineList{
+.container2-inlineList{
   display: flex;
   flex-direction: column;
+  width: 30%;
 }
-  .hvr-sweep-to-top {
+/*====================
+3rd Container
+=============*/
+
+.container3{
+  height: auto;
+  width: 100%;
+  display: flex;
+
 }
+.container3-body{
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  margin: 16px;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+}
+.container3-left{
+display: flex;
+width: 100%;
+height: auto;
+margin-bottom: 48px;
+}
+
+.container3-right{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.container3-p{
+    font-size:18px;
+    line-height: 28px;
+}
+
+
+
+
+/*===================Media Queries 1024==================*/
+
+
+}
+@media (max-width:1024px) {
+  .container1-body, .container2-body{
+    flex-direction: column;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  /*================
+  First Container
+  ================*/
+
+  .container1{
+    background-image: url('../image/mobileimage.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .name{
+    order:1
+  }
+  .face{
+    order:3
+  }
+  .title{
+    width: auto;
+    order:2
+    }
+
+    /*====================
+    Second Container
+    =============*/
+  .container2{
+      height: auto;
+      width: 100%;
+      display: flex;
+    }
+
+  .container2-top{
+    display: flex;
+    flex-direction: column;
+  }
+  .container2-left, .container2-right{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 0;
+  }
+  .container2-left{
+    margin-top: ;
+    margin-bottom:48px;
+  }
+  .container2-right{
+    margin-top: 0;
+    margin-bottom:48px;
+  }
+  .container2-bottom{
+    margin-top: 0;
+    width:100%;
+  }
+  .container2-intro{
+    margin-bottom: 48px;
+    margin:top:48px;
+  }
+  .container2-skills-list{
+    margin-top: 20px;
+  }
+  p{
+    font-size:25px;
+    line-height: 28px;
+  }
+  .container2-inlineList{
+    display: flex;
+    flex-direction: column;
+  }
+  /*====================
+  3rd Container
+  =============*/
+
+  .container3{
+    height: auto;
+    width: 100%;
+    display: flex;
+
+  }
+  .container3-body{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    margin: 16px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .container3-left{
+  display: flex;
+  width: auto;
+  height: auto;
+  margin-bottom: 48px;
+  justify-content: center;
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.25);
+  border-radius: 3px;
+  }
+
+  .container3-right{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .container3-p{
+      font-size:18px;
+      line-height: 28px;
+  }
+
+  }
+
 }
