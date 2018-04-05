@@ -34,7 +34,7 @@ color: #208752;
 p{
   font-family: 'Vesper Libre', serif;
   font-weight: 400;
-  font-size:30px;
+  font-size:25px;
   line-height: 44px;
 
 }
@@ -307,14 +307,14 @@ p{
 .container1-face{
 width:100%;
 }
+.title{
+  width: auto;
+  order:1
+  }
+
   .face{
     order:2
   }
-  .title{
-    width: auto;
-    order:1
-    }
-
     /*====================
     Second Container
     =============*/
